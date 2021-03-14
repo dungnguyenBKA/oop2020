@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class MyDate {
@@ -79,6 +81,17 @@ public class MyDate {
             System.out.println("Year invalid, cannot create date");
         }
         scanner.close();
+        // check date valid
+        DateTimeFormatter dateFormatter = DateTimeFormatter.BASIC_ISO_DATE;
+        try {
+            String date = String.format("%04d%02d%02d", year, month, day);
+            LocalDate.parse(date, dateFormatter);
+        } catch (Exception e) {
+            System.out.println("Invalid date!!!");
+            day = -1;
+            month = -1;
+            year = -1;
+        }
     }
 
     public void print() {
