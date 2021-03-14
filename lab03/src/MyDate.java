@@ -62,12 +62,14 @@ public class MyDate {
         int tmp = scanner.nextInt();
         if (!setDay(tmp)) {
             System.out.println("Day invalid, cannot create date");
+            scanner.close();
             return;
         }
         System.out.print("month: ");
         tmp = scanner.nextInt();
         if (!setMonth(tmp)) {
             System.out.println("Month invalid, cannot create date");
+            scanner.close();
             return;
         }
 
@@ -76,6 +78,7 @@ public class MyDate {
         if (!setYear(tmp)) {
             System.out.println("Year invalid, cannot create date");
         }
+        scanner.close();
     }
 
     public void print() {
