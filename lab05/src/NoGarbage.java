@@ -7,7 +7,7 @@ public class NoGarbage {
         StringBuilder s = new StringBuilder();
         for(int i= 0; i<200000; i++)
             s.append(r.nextInt(2));
-        //s.toString();
+        s.toString();
         System.out.println(System.currentTimeMillis()-start);
     }
 }
