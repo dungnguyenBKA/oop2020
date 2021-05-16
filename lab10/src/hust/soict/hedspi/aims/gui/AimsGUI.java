@@ -1,0 +1,1 @@
+package hust.soict.hedspi.aims.gui;public class AimsGUI {    public static void main(String[] args) {        new HomeFrame();    }}
